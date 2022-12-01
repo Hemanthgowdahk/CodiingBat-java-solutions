@@ -14,3 +14,58 @@ public class SameLastFirst {
 		System.out.println(sameFirstLast(new int[]{5,3,5}));
 	}
 }
+------------------------------------------------------------------------------
+// commonEnd
+//
+Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same last element. Both arrays will be length 1 or more.
+public class CommonEndArray {
+	public static boolean commonEnd(int[] a, int[] b) {
+		if(a.length>=1 && b.length>=1){
+			if(a[0]==b[0] || a[a.length-1]==b[b.length-1]){
+				return true;
+			}
+		}
+		return false;
+	}
+	public static void main(String[] args) {
+         System.out.println(commonEnd(new int[] {33,63,7},new int[] {3,63,71}));
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------
+// sum3
+// Given an array of ints length 3, return the sum of all the elements.
+
+public class SumThree {
+	public static int sum3(int[] nums) {
+		int sum=0;
+		for(int i : nums){
+			sum = sum+i;
+		}
+		return sum;
+	}
+	public static void main(String[] args) {
+      System.out.println(sum3(new int[] {3,5,8}));
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------
+// reverse3
+//Given an array of ints length 3, return a new array with the elements in reverse order, so {1, 2, 3} becomes {3, 2, 1}.
+
+public class ReverseThree {
+	public static int[] reverse3(int[] nums) {
+		int[] res = new int[nums.length];
+		int j =0;
+		for(int i=nums.length-1; i>=0; i--){
+			res[j]=nums[i];
+			j++;
+		}
+		return res;
+	}
+	public static void main(String[] args) {
+		int[] a = reverse3(new int[] {1,2,3,4,5,6,7,8});
+		for(int i : a) {
+          System.out.print(i+" ");
+		}
+	}
+}
+----------------------------------------------------------------------------------------------------------------------------
